@@ -1,0 +1,68 @@
+------------------------------------------------------------------------------------------------------------------------------------------
+
+.PEM file is used to connect via SSH to Linux based systems. It contains the private key needed to authenticate and connect to the server.
+This file is used with SSH clients like OpenSSH on Linux, macOS, or Windows Subsystem for Linux (WSL).
+
+.PPK file is used to connect to Linux based systems.
+ This file is used with PUTTY.
+
+KEY.PUB: this file is generated with .ppk or .pem file and can be used to import the keys into AWS Key Pairs.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+******************************* Generating and using the private and public keys.*******************************
+
+We use puttygen to generate private key 'key.pem' by doing 'Save as private key'.
+Then we should again save the public key of that same key which generated and save it as 'key.pub' by doing Save as publickey'.
+We can use the key.pub to import it into AWS KeyPairs.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+**************************** Connecting to different OS based systems ***************
+
+When connecting to an AWS EC2 instance via SSH, the default username can vary depending on the operating system of the instance. Here’s a quick guide to which username to use for some common Linux distributions:
+Default SSH Usernames
+
+    Amazon Linux and Amazon Linux 2:
+        Username: ec2-user
+        Description: Amazon Linux and Amazon Linux 2 instances use ec2-user as the default SSH username.
+
+    Ubuntu:
+        Username: ubuntu
+        Description: Ubuntu instances use ubuntu as the default SSH username.
+
+    CentOS:
+        Username: centos
+        Description: CentOS instances use centos as the default SSH username.
+
+    Red Hat Enterprise Linux (RHEL):
+        Username: ec2-user
+        Description: RHEL instances use ec2-user as the default SSH username, similar to Amazon Linux.
+
+    SUSE Linux:
+        Username: ec2-user
+        Description: SUSE Linux instances also use ec2-user as the default SSH username.
+
+    Debian:
+        Username: admin or debian
+        Description: Debian instances often use admin or debian as the default SSH username.
+
+How to Determine the Correct Username
+
+    Check the AWS Documentation: AWS provides documentation with the AMI details, including the default username.
+    Consult the AMI Provider: If you’re using a third-party AMI, check the documentation or the provider’s website for the default username.
+    Instance Details: If you have access to the AWS Management Console, you might be able to view details about the instance or AMI that specify the default username.
+
+Example SSH Commands
+
+    Amazon Linux:
+
+    bash
+
+ssh -i /path/to/key.pem ec2-user@your-ec2-public-dns
+
+
+
