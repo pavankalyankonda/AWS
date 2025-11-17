@@ -1,0 +1,18 @@
+#!/bin/bash
+apt update -y
+apt install nginx -y
+
+PRIVATE_IP=$(hostname -I | awk '{print $1}')
+
+echo "<html>
+<head><title>Server</title></head>
+<body style='font-family: Arial; text-align: center; margin-top: 50px;'>
+<h1 style='color: green;'>Welcome to Private Server</h1>
+<h2>Private IP: $PRIVATE_IP</h2>
+<hr>
+<p>This page is served from the private subnet.</p>
+</body>
+</html>" > /var/www/html/index.html
+
+systemctl enable nginx
+systemctl restart nginx
