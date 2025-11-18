@@ -1,5 +1,37 @@
 ---
 
+# **1. LINUX FILE SYSTEM DIAGRAM (BEGINNER-FRIENDLY & VISUAL)**
+
+```
+/
+├── bin/        → Essential user commands (ls, cp, mv)
+├── sbin/       → System admin commands (reboot, iptables)
+├── boot/       → Bootloader files (kernel, initrd)
+├── dev/        → Device files (disks, USB, terminals)
+├── etc/        → System-wide configuration files
+├── home/
+│   ├── ubuntu/ → Normal user home directory
+│   └── user2/
+├── root/       → Root user's home directory
+├── lib/        → System libraries
+├── lib64/
+├── usr/
+│   ├── bin/    → Installed software binaries
+│   ├── lib/    → Libraries
+│   └── share/  → Icons, docs, shared resources
+├── var/
+│   ├── log/    → System logs
+│   ├── www/    → Web server files (Nginx/Apache)
+│   └── cache/
+├── tmp/        → Temporary files (deleted after reboot)
+├── opt/        → Optional third-party software
+├── media/      → External media (USB, HDD)
+└── mnt/        → Mount point for temporary filesystems
+
+---
+
+---
+
 # ✅ **1. Meaning of:**
 
 **“Your script is in `/root/nginxscript.sh`, and you are in `/home/ubuntu`.”**
@@ -39,7 +71,7 @@ You have **two options**:
 
 ---
 
-# 🟢 **OPTION 1: Stay as ubuntu user & use sudo**
+## 🟢 **OPTION 1: Stay as ubuntu user & use sudo**
 
 This is the recommended method.
 
@@ -57,7 +89,7 @@ This runs the script with **root privileges** without switching accounts.
 
 ---
 
-# 🟢 **OPTION 2: Switch to root user and run it**
+## 🟢 **OPTION 2: Switch to root user and run it**
 
 ```bash
 sudo su -
@@ -74,9 +106,9 @@ It's safer, cleaner, and logs everything.
 
 ---
 
-# 🔥 Now Your Second Question:
+## 🔥 Now Your Second Question:
 
-# 📂 **Linux File System Structure (Explained Simply)**
+## 📂 **Linux File System Structure (Explained Simply)**
 
 Below is the **real meaning of all important folders** you see in `/`.
 

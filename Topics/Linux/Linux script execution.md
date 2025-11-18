@@ -4,7 +4,7 @@ You can **copy-paste** this into your notes.
 
 ---
 
-# 📘 **How to Execute a `.sh` File in Linux (Full Guide)**
+## 📘 **How to Execute a `.sh` File in Linux (Full Guide)**
 
 This guide explains:
 
@@ -15,7 +15,7 @@ This guide explains:
 
 ---
 
-# 🧩 **1. Make the Script Executable**
+## 🧩 **1. Make the Script Executable**
 
 Before you can run a script directly, you must give it **execute permission**.
 
@@ -39,13 +39,13 @@ You should see:
 
 ---
 
-# 🧩 **2. Executing a Script (All Possible Ways)**
+## 🧩 **2. Executing a Script (All Possible Ways)**
 
 Below are **all valid methods** and **when** to use each.
 
 ---
 
-## ✅ **A. Execute using relative path (`./script.sh`)**
+### ✅ **A. Execute using relative path (`./script.sh`)**
 
 Use this when:
 
@@ -65,7 +65,7 @@ Because Linux **does NOT search the current folder automatically**.
 
 ---
 
-## ✅ **B. Execute using full absolute path**
+### ✅ **B. Execute using full absolute path**
 
 Useful when:
 
@@ -129,7 +129,7 @@ Use when:
 
 ---
 
-# 🧩 **3. Running Script From Another Directory**
+## 🧩 **3. Running Script From Another Directory**
 
 Example:
 
@@ -158,7 +158,7 @@ sudo ./nginxscript.sh
 
 ---
 
-# 🧩 **4. When each method should be used (Summary Table)**
+## 🧩 **4. When each method should be used (Summary Table)**
 
 | Method                 | When to Use                              | Needs execute permission? |
 | ---------------------- | ---------------------------------------- | ------------------------- |
@@ -169,7 +169,7 @@ sudo ./nginxscript.sh
 
 ---
 
-# 🧩 **5. Common Errors and Fixes**
+## 🧩 **5. Common Errors and Fixes**
 
 ### ❌ *Error:* `command not found` when running `./script.sh`
 
@@ -202,7 +202,7 @@ sudo ./script.sh
 
 ---
 
-# 🧩 **6. Recommended Best Practice**
+## 🧩 **6. Recommended Best Practice**
 
 ### ✔ Always add a shebang at top of the script:
 
@@ -214,7 +214,7 @@ This tells Linux which shell to use.
 
 ---
 
-# 🧩 **7. Example Script Execution (From /root)**
+## 🧩 **7. Example Script Execution (From /root)**
 
 Your script `/root/nginxscript.sh`
 
@@ -239,7 +239,7 @@ sudo bash /root/nginxscript.sh
 
 ---
 
-# ✅ **Copy-Ready Final Summary**
+## ✅ **Copy-Ready Final Summary**
 
 ```
 # Give execute permission
