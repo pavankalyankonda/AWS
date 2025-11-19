@@ -11,7 +11,7 @@
 ├── etc/        → System-wide configuration files
 ├── home/
 │   ├── ubuntu/ → Normal user home directory
-│   └── user2/
+│   └── user2/  
 ├── root/       → Root user's home directory
 ├── lib/        → System libraries
 ├── lib64/
@@ -27,6 +27,75 @@
 ├── opt/        → Optional third-party software
 ├── media/      → External media (USB, HDD)
 └── mnt/        → Mount point for temporary filesystems
+
+---
+
+## Both `/usr/bin` and `/usr/sbin` store **executable programs**, but the difference is:
+
+---
+
+### **1. /usr/bin — for all users**
+
+✔ Contains applications and commands intended for **regular users + root**
+✔ Any user can run these commands
+✔ This is where most common programs are stored
+
+### Examples in `/usr/bin`
+
+```
+ls
+cp
+mv
+cat
+unzip
+ifconfig (from net-tools)
+python3
+aws (if installed via APT)
+```
+
+### If a command works without sudo → it is usually in `/usr/bin`.
+
+---
+
+## **2. /usr/sbin — for system administrators only**
+
+✔ Contains **system administration tools**
+✔ Intended for **root (sudo)**
+✔ Normal users typically *cannot* run these without sudo
+
+### Examples in `/usr/sbin`
+
+```
+nginx
+arp
+iptables
+useradd
+reboot
+mount
+```
+
+### If the tool configures the system → it goes to `/usr/sbin`.
+
+---
+
+# 🔍 **Why are some net-tools binaries in /usr/sbin instead of /usr/bin?**
+
+Example:
+
+* `ifconfig` → `/usr/bin/ifconfig` (any user can view interfaces)
+* `arp` → `/usr/sbin/arp` (system-level networking)
+* `rarp` → `/usr/sbin/rarp` (admin-only function)
+
+This is normal because the package contains **multiple tools with different privilege levels**.
+
+---
+
+# ⭐ Simple Rule to Remember
+
+| Folder        | Who can run?        | What does it contain?          |
+| ------------- | ------------------- | ------------------------------ |
+| **/usr/bin**  | Everyone            | User-level applications        |
+| **/usr/sbin** | Only root (or sudo) | System administration commands |
 
 ---
 
