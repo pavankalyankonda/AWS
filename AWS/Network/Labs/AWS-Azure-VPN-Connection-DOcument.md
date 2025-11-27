@@ -11,3 +11,4 @@ Now we need to add this winserver in aws to ADserver domain in the Azure using V
 - After creation of this VPN connection on Azure end, the tunnels will still not be up as we don't have any route added in the route table of the AWS VPC.
 - SO, we need to add the route with the VNET CIDR range and need to select the Virtual Private Gateway here.
 - Now, tunnels will be up and we can start adding the winserver to the ADserver domain and access the server using domain creds.
+

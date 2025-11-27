@@ -1,0 +1,5 @@
+- what are edge associations in the Aws VPC and in case if a IGW is attached to it, can I not use the same IGW to the routetale?
+- how can I use ec2 console oin my ec2, what are all required like managing the access and then useing right type of instances
+- what are ipv4 enabling settings on subnet and VPC level?
+- what are express route connections in azure, is it similar to site to site connection in aws, but it shows as hybrid connections in the azure under  	expreses route connections, why?
+- Understand OSI layer?
